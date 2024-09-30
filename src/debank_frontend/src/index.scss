@@ -1,0 +1,162 @@
+html,
+body {
+  background-color: #211F2B;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+h2 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.divider {
+  width: 100px;
+  height: 3px;
+  margin: 20px auto;
+  background-color: #617BFF;
+}
+
+input,
+textarea {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin: 0;
+  border-radius: 7px;
+  border: 2px white solid;
+  background-color: white;
+  padding: 10px 20px;
+  width: 100%;
+  color: #1E1C29;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px #617BFF solid;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 14px;
+  padding: 30px 30px 20px 30px;
+  margin-top: 50px;
+}
+
+input[name="amount"] {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#submit-btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 7px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  border: 2px #617BFF solid;
+  color: white;
+  background-color: #617BFF;
+  padding: 15px;
+  transition: all 0.2s;
+}
+
+#submit-btn:hover {
+  border: 2px #8095FF solid;
+  background-color: #8095FF;
+}
+
+#submit-btn:disabled {
+  border: 2px rgba(255, 255, 255, 0.1) solid;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+textarea[name="address"] {
+  resize: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 2.7rem;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Stylish Spinner */
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1); /* Lighter base */
+  border-top: 4px solid transparent; /* Transparent to create a space */
+  border-left: 4px solid #617BFF; /* Primary color */
+  border-right: 4px solid #FF617B; /* Secondary color */
+  border-bottom: 4px solid #61FF7B; /* Tertiary color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+  margin: 20px auto;
+  box-shadow: 0 0 20px rgba(97, 123, 255, 0.7),
+              0 0 20px rgba(255, 97, 123, 0.7),
+              0 0 20px rgba(97, 255, 123, 0.7);
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glowing Effect Animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(97, 123, 255, 0.7),
+                0 0 10px rgba(255, 97, 123, 0.7),
+                0 0 10px rgba(97, 255, 123, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(97, 123, 255, 1),
+                0 0 30px rgba(255, 97, 123, 1),
+                0 0 30px rgba(97, 255, 123, 1);
+  }
+}
+
+/* Hide spinner initially */
+.spinner-hidden {
+  display: none;
+}

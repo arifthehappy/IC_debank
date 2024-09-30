@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "debank_backend": {
+      "main": "src/debank_backend/main.mo",
+      "type": "motoko"
+    },
+    "debank_frontend": {
+      "dependencies": [
+        "debank_backend"
+      ],
+      "source": [
+        "src/debank_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "debank_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
